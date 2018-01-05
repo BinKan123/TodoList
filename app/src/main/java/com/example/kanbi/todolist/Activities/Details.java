@@ -66,6 +66,7 @@ public class Details extends AppCompatActivity {
         itemSaveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //Got response code=200, but Api Json can't update!!!????
                 updateToDoList(taskIdGet,taskTitleGet,taskDetailsGet);
             }
         });
@@ -78,12 +79,6 @@ public class Details extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-    }
-
-    @Override
-    public void onBackPressed() {
-        // TODO Auto-generated method stub
-        super.onBackPressed();
     }
 
     private void updateToDoList(long id, String title, String description){
@@ -113,5 +108,13 @@ public class Details extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), t.toString(), Toast.LENGTH_LONG).show();
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        // TODO Auto-generated method stub
+        super.onBackPressed();
+        Intent intent = new Intent(Details.this,MainActivity.class);
+        startActivity(intent);
     }
 }

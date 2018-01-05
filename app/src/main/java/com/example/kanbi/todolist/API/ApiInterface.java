@@ -21,8 +21,8 @@ import retrofit2.http.Query;
  */
 
 public interface ApiInterface {
-///id?sort=desc
-    @GET("2a00ea83/notes?sort_by=id.desc")
+///("2a00ea83/notes/id?sort=desc") should work, but not working here!!????
+    @GET("2a00ea83/notes")
     Call<List<ToDoModel>> getResults();
 
     @POST("2a00ea83/notes")

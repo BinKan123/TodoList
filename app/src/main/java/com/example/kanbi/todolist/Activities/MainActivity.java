@@ -82,6 +82,8 @@ public class MainActivity extends AppCompatActivity {
                 todoAdapter.notifyDataSetChanged();
                 recyclerView.setAdapter(todoAdapter);
                 progressDialog.dismiss();
+                recyclerView.invalidate();
+
             }
 
             @Override

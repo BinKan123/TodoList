@@ -83,4 +83,5 @@ public class ToDoAdapter extends RecyclerView.Adapter<ToDoAdapter.ViewHolder>  {
         return todoList.size();
     }
 
+
 }

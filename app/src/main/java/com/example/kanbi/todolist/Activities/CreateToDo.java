@@ -100,4 +100,13 @@ public class CreateToDo extends AppCompatActivity {
         });
     }
 
+    @Override
+    public void onBackPressed() {
+        // TODO Auto-generated method stub
+        super.onBackPressed();
+        Intent intent = new Intent(CreateToDo.this,MainActivity.class);
+        startActivity(intent);
+    }
+
+
 }
